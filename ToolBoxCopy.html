@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tools & Websites Glossary</title>
+  <meta name="description" content="A simple glossary of useful tools and websites.">
+  <style>
+    /* Basic, readable defaults to get you started */
+    :root {
+      --bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+      --code: #f8fafc;
+      --quote:#2E8B57;
+      --maxw: 800px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #fafafa;
+    }
+    header .container { padding-top: 1.75rem; padding-bottom: 1.75rem; }
+    h1 { margin: 0 0 .25rem; font-size: 1.75rem; }
+    p.subtitle { margin: 0; color: var(--muted); }
+    main .container { padding-top: 1.5rem; padding-bottom: 3rem; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+
+    /* Glossary layout using semantic definition lists */
+    .glossary {
+      margin: 0;
+      padding: 0;
+    }
+    .entry {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .entry:last-child { border-bottom: 0; }
+
+    dt {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin: 0 0 .35rem;
+    }
+    dt a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    dt a:hover, dt a:focus { text-decoration: underline; }
+    dd {
+      margin: 0 0 .25rem 0;
+    }
+    .tags {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+    }
+    footer .container { padding-top: 1rem; padding-bottom: 2rem; color: var(--muted); font-size: .95rem; }
+    span.quote { color: var(--quote); font-style: italic; }
+
+  </style>
+</head>
+<body>
+  <a href="#content" class="sr-only">Skip to content</a>
+
+  <header>
+    <div class="container">
+      <h1>Tools & Websites Glossary</h1>
+      <p class="subtitle">A growing list of useful resources, with short descriptions and links. I added some notes in a few places, if you have suggestions or want to share some experiances feel free to reach out!</p>
+      <span class="quote">"Like this!"~ Tim</span>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      <section aria-labelledby="glossary-heading">
+        <h2 id="glossary-heading" class="sr-only">Glossary</h2>
+
+        <!-- Start of the glossary. Add each item as a .entry containing a dt (term) and one or more dd (definitions/details). -->
+        <dl class="glossary">
+          <div class="entry">
+            <dt>
+              <a href="https://www.notion.so" target="_blank" rel="noopener noreferrer">Notion</a>
+            </dt>
+            <dd>Workspace for notes, docs, and lightweight databases. Great for personal knowledge bases.</dd>
+            <dd class="tags">tags: notes, productivity, docs</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </dt>
+            <dd>Code hosting with issues, pull requests, and CI/CD integrations.</dd>
+            <dd class="tags">tags: code, version control, collaboration</dd>
+          </div>
+
+          <div class="entry">
+            <dt><a href="https://draw.io" target="_blank" rel="noopener noreferrer">DrawIO</a></dt>
+            <dd>Free diagramming tool for creating flowcharts and visual diagrams. Recommended for creating network topologies.</dd>
+            <dd class="tags">tags: drawing, diagrams, network, chart</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://translate.google.com/" target="_blank" rel="noopener noreferrer">Google Translate</a>
+            </dt>
+            <dd>Free translator for text, speech, images, and entire web pages across 100+ languages; includes pronunciation and a phrasebook. Not the most accurate but highly versetile.</dd>
+            <dd class="tags">tags: translation, language, productivity</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://www.deepl.com/" target="_blank" rel="noopener noreferrer">DeepL</a>
+            </dt>
+            <dd>Neural-network translator known for high-quality results; supports document translation, custom glossaries, and tone options.</dd>
+            <dd class="tags">tags: translation, language, productivity</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://www.sejda.com/pdf-editor" target="_blank" rel="noopener noreferrer">Sejda PDF Editor</a>
+            </dt>
+            <dd>Online PDF editor to edit text and images, annotate and sign, and quickly merge/split/compress files; auto-deletes uploads for privacy.</dd>
+            <dd class="tags">tags: pdf, documents, editing, productivity</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://smallpdf.com/" target="_blank" rel="noopener noreferrer">Smallpdf</a>
+            </dt>
+            <dd>Suite of PDF tools to compress, convert (PDF ↔ Word/Excel/PPT), edit, e-sign, merge/split, and protect files; available on web and desktop.</dd>
+            <dd class="tags">tags: pdf, documents, conversion, editing, e-signature, productivity</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://regexr.com/" target="_blank" rel="noopener noreferrer">RegExr</a>
+            </dt>
+            <dd>Interactive regular expression editor with real-time highlighting and explanations, a built-in cheatsheet, and a community pattern library; test text and share links.</dd>
+            <dd class="tags">tags: regex, developer tools, testing, text</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://textmechanic.com/" target="_blank" rel="noopener noreferrer">TextMechanic</a>
+            </dt>
+            <dd>Collection of bulk text tools: find/replace, remove duplicates, sort lines, add/remove line breaks, case convert, trim/clean, and more.</dd>
+            <dd class="tags">tags: text, utilities, formatting, productivity</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://tohtml.com/" target="_blank" rel="noopener noreferrer">ToHTML</a>
+            </dt>
+            <dd>Online converters for text and code: text→HTML, HTML→text, code→HTML with syntax highlighting, and CSV/JSON→HTML tables; includes HTML encoder/decoder.</dd>
+            <dd class="tags">tags: html, conversion, formatting, developer tools, text</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://www.virustotal.com/gui/home/upload" target="_blank" rel="noopener noreferrer">VirusTotal</a>
+            </dt>
+            <dd>Multi-engine scanner for files, URLs, and hashes; checks against dozens of AV engines and sandboxes, with detection details, behavior analysis, and community reports.</dd>
+            <span class="quote"> "Please take care to not publish personal information"~ Tim </span>
+            <dd class="tags">tags: security, malware, analysis, files, urls</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://squoosh.app/" target="_blank" rel="noopener noreferrer">Squoosh</a>
+            </dt>
+            <dd>Browser-based image compressor and converter with side-by-side preview; supports AVIF, WebP, MozJPEG, and OxiPNG, adjustable quality/resize, and works offline as a PWA.</dd>
+            <dd class="tags">tags: images, compression, optimization, conversion, web</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://ss64.com/" target="_blank" rel="noopener noreferrer">SS64</a>
+            </dt>
+            <dd>Command-line reference and examples for Windows CMD, PowerShell, Bash, and macOS; concise syntax, switches, and scripting notes.</dd>
+            <dd class="tags">tags: cli, reference, shell, windows, linux, macos, scripting</dd>
+          </div>
+          
+          <div class="entry">
+            <dt>
+              <a href="https://www.pdf24.org/" target="_blank" rel="noopener noreferrer">PDF24</a>
+            </dt>
+            <dd>Suite of PDF tools to create, merge/split, compress, convert, edit/annotate, OCR scans, and e-sign; available online and as a free Windows desktop app with on-device processing.</dd>
+            <dd class="tags">tags: pdf, documents, editing, conversion, ocr, compression, e-signature</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://code.visualstudio.com/download" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>
+            </dt>
+            <dd>Free, extensible code editor for Windows, macOS, and Linux; built-in IntelliSense, debugging, Git integration, terminal, and a rich extensions marketplace (Remote/WSL/Containers supported).</dd>
+            <dd class="tags">tags: editor, code, ide, extensions, debugging, git, cross-platform</dd>
+          </div>
+
+          <div class="entry">
+            <dt>
+              <a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">Wikipedia</a>
+            </dt>
+            <dd>Free, multilingual encyclopedia written collaboratively by volunteers; a broad reference with citations, summaries, and links to primary sources.</dd>
+            <span class="quote">"Make sure to check your sources!"~ Tim</span>
+            <dd class="tags">tags: encyclopedia, reference, knowledge, research</dd>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <!-- Duplicate from here to add more entries:
+          <div class="entry">
+            <dt><a href="https://example.com" target="_blank" rel="noopener noreferrer">Tool Name</a></dt>
+            <dd>One sentence describing what it is or why it's useful.</dd>
+            <span class="quote">"All your work in one place"</span>
+            <dd class="tags">tags: category, another</dd>
+          </div>
+          -->
+        </dl>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Made and maintained by Tim Braun • Last updated <time datetime="2025-11-11">Nov 11, 2025</time></p>
+    </div>
+  </footer>
+</body>
+</html>
