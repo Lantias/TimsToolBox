@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Notion",
+    "url": "https://www.notion.so",
+    "description": "Workspace for notes, docs, and lightweight databases. Great for personal knowledge bases.",
+    "tags": ["notes", "productivity", "docs"]
+  },
+  {
+    "name": "GitHub",
+    "url": "https://github.com",
+    "description": "Code hosting with issues, pull requests, and CI/CD integrations.",
+    "tags": ["code", "version control", "collaboration"]
+  },
+  {
+    "name": "DrawIO",
+    "url": "https://draw.io",
+    "description": "Free diagramming tool for creating flowcharts and visual diagrams. Recommended for creating network topologies.",
+    "tags": ["drawing", "diagrams", "network", "chart"]
+  },
+  {
+    "name": "Google Translate",
+    "url": "https://translate.google.com/",
+    "description": "Free translator for text, speech, images, and entire web pages across 100+ languages; includes pronunciation and a phrasebook. Not the most accurate but highly versetile.",
+    "tags": ["translation", "language", "productivity"]
+  },
+  {
+    "name": "DeepL",
+    "url": "https://www.deepl.com/",
+    "description": "Neural-network translator known for high-quality results; supports document translation, custom glossaries, and tone options.",
+    "tags": ["translation", "language", "productivity"]
+  },
+  {
+    "name": "Sejda PDF Editor",
+    "url": "https://www.sejda.com/pdf-editor",
+    "description": "Online PDF editor to edit text and images, annotate and sign, and quickly merge/split/compress files; auto-deletes uploads for privacy.",
+    "tags": ["pdf", "documents", "editing", "productivity"]
+  },
+  {
+    "name": "Smallpdf",
+    "url": "https://smallpdf.com/",
+    "description": "Suite of PDF tools to compress, convert (PDF ↔ Word/Excel/PPT), edit, e-sign, merge/split, and protect files; available on web and desktop.",
+    "tags": ["pdf", "documents", "conversion", "editing", "e-signature", "productivity"]
+  },
+  {
+    "name": "RegExr",
+    "url": "https://regexr.com/",
+    "description": "Interactive regular expression editor with real-time highlighting and explanations, a built-in cheatsheet, and a community pattern library; test text and share links.",
+    "tags": ["regex", "developer tools", "testing", "text"]
+  },
+  {
+    "name": "TextMechanic",
+    "url": "https://textmechanic.com/",
+    "description": "Collection of bulk text tools: find/replace, remove duplicates, sort lines, add/remove line breaks, case convert, trim/clean, and more.",
+    "tags": ["text", "utilities", "formatting", "productivity"]
+  },
+  {
+    "name": "ToHTML",
+    "url": "https://tohtml.com/",
+    "description": "Online converters for text and code: text→HTML, HTML→text, code→HTML with syntax highlighting, and CSV/JSON→HTML tables; includes HTML encoder/decoder.",
+    "tags": ["html", "conversion", "formatting", "developer tools", "text"]
+  },
+  {
+    "name": "VirusTotal",
+    "url": "https://www.virustotal.com/gui/home/upload",
+    "description": "Multi-engine scanner for files, URLs, and hashes; checks against dozens of AV engines and sandboxes, with detection details, behavior analysis, and community reports.",
+    "note": "\"Please take care to not publish personal information\"~ Tim",
+    "tags": ["security", "malware", "analysis", "files", "urls"]
+  },
+  {
+    "name": "Squoosh",
+    "url": "https://squoosh.app/",
+    "description": "Browser-based image compressor and converter with side-by-side preview; supports AVIF, WebP, MozJPEG, and OxiPNG, adjustable quality/resize, and works offline as a PWA.",
+    "tags": ["images", "compression", "optimization", "conversion", "web"]
+  },
+  {
+    "name": "SS64",
+    "url": "https://ss64.com/",
+    "description": "Command-line reference and examples for Windows CMD, PowerShell, Bash, and macOS; concise syntax, switches, and scripting notes.",
+    "tags": ["cli", "reference", "shell", "windows", "linux", "macos", "scripting"]
+  },
+  {
+    "name": "PDF24",
+    "url": "https://www.pdf24.org/",
+    "description": "Suite of PDF tools to create, merge/split, compress, convert, edit/annotate, OCR scans, and e-sign; available online and as a free Windows desktop app with on-device processing.",
+    "tags": ["pdf", "documents", "editing", "conversion", "ocr", "compression", "e-signature"]
+  },
+  {
+    "name": "Visual Studio Code",
+    "url": "https://code.visualstudio.com/download",
+    "description": "Free, extensible code editor for Windows, macOS, and Linux; built-in IntelliSense, debugging, Git integration, terminal, and a rich extensions marketplace (Remote/WSL/Containers supported).",
+    "tags": ["editor", "code", "ide", "extensions", "debugging", "git", "cross-platform"]
+  },
+  {
+    "name": "Wikipedia",
+    "url": "https://www.wikipedia.org/",
+    "description": "Free, multilingual encyclopedia written collaboratively by volunteers; a broad reference with citations, summaries, and links to primary sources.",
+    "note": "\"Make sure to check your sources!\"~ Tim",
+    "tags": ["encyclopedia", "reference", "knowledge", "research"]
+  }
+]

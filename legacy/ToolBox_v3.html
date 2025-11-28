@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tools & Websites Glossary</title>
+  <meta name="description" content="A simple glossary of useful tools and websites.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --border: #e5e7eb;
+      --code: #f8fafc;
+      --quote:#2E8B57;
+      --maxw: 800px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 1.25rem;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      background: #fafafa;
+    }
+    header .container { padding-top: 1.75rem; padding-bottom: 1.75rem; }
+    h1 { margin: 0 0 .25rem; font-size: 1.75rem; }
+    p.subtitle { margin: 0; color: var(--muted); }
+    main .container { padding-top: 1.5rem; padding-bottom: 3rem; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+
+    .glossary {
+      margin: 0;
+      padding: 0;
+    }
+    .entry {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .entry:last-child { border-bottom: 0; }
+
+    dt {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin: 0 0 .35rem;
+    }
+    dt a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    dt a:hover, dt a:focus { text-decoration: underline; }
+    dd {
+      margin: 0 0 .25rem 0;
+    }
+    .tags {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      background: #fafafa;
+    }
+    footer .container { padding-top: 1rem; padding-bottom: 2rem; color: var(--muted); font-size: .95rem; }
+    span.quote { color: var(--quote); font-style: italic; display:block; margin:.25rem 0; }
+    
+    #search-form {
+      margin: 0 0 1rem;
+    }
+
+    #search-input {
+      width: 100%;
+      max-width: 420px;
+      padding: 0.5rem 0.75rem;
+      font-size: 1rem;
+      border-radius: 0.375rem;
+      border: 1px solid var(--border);
+      outline: none;
+    }
+
+    #search-input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.25);
+    }
+
+    .search-status {
+      margin: 0 0 0.75rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }    
+  </style>
+</head>
+<body>
+  <a href="#content" class="sr-only">Skip to content</a>
+
+  <header>
+    <div class="container">
+      <h1>Tools & Websites Glossary</h1>
+      <p class="subtitle">
+        A growing list of useful resources, with short descriptions and links.
+        I added some notes in a few places, if you have suggestions or want to share some experiances feel free to reach out!
+      </p>
+      <span class="quote">"Like this!"~ Tim</span>
+    </div>
+  </header>
+
+  <main id="content">
+    <div class="container">
+      <section aria-labelledby="glossary-heading">
+        <h2 id="glossary-heading" class="sr-only">Glossary</h2>
+        
+        <!-- Search bar -->
+        <form id="search-form" role="search" aria-label="Search tools">
+          <label for="search-input" class="sr-only">Search tools</label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search by name, description, or tags…"
+            autocomplete="off"
+          />
+        </form>
+
+        <p id="search-status" class="search-status" aria-live="polite"></p>
+
+        <dl id="glossary" class="glossary"></dl>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Made and maintained by Tim Braun • Last updated <time datetime="2025-11-11">Nov 11, 2025</time></p>
+    </div>
+  </footer>
+
+<script type="module">
+  const glossaryEl = document.getElementById('glossary');
+  const searchInput = document.getElementById('search-input');
+  const searchStatus = document.getElementById('search-status');
+
+  let allEntries = []; // cache loaded entries
+
+  function renderGlossary(entries) {
+    glossaryEl.innerHTML = '';
+
+    if (!entries.length) {
+      const p = document.createElement('p');
+      p.textContent = 'No matching tools found.';
+      glossaryEl.appendChild(p);
+      return;
+    }
+
+    const frag = document.createDocumentFragment();
+
+    for (const item of entries) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'entry';
+
+      const dt = document.createElement('dt');
+      const a = document.createElement('a');
+      a.href = item.url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.textContent = item.name;
+      dt.appendChild(a);
+      wrapper.appendChild(dt);
+
+      const ddDesc = document.createElement('dd');
+      ddDesc.textContent = item.description;
+      wrapper.appendChild(ddDesc);
+
+      if (item.note) {
+        const noteSpan = document.createElement('span');
+        noteSpan.className = 'quote';
+        noteSpan.textContent = item.note;
+        wrapper.appendChild(noteSpan);
+      }
+
+      const ddTags = document.createElement('dd');
+      ddTags.className = 'tags';
+      ddTags.textContent = `tags: ${item.tags.join(', ')}`;
+      wrapper.appendChild(ddTags);
+
+      frag.appendChild(wrapper);
+    }
+
+    glossaryEl.appendChild(frag);
+  }
+
+  function updateSearchStatus(query, resultCount, totalCount) {
+    if (!query) {
+      searchStatus.textContent = `Showing all ${totalCount} tools.`;
+      return;
+    }
+    searchStatus.textContent =
+      `“${query}” — ${resultCount} of ${totalCount} tools shown.`;
+  }
+
+  function filterEntries(query) {
+    const q = query.trim().toLowerCase();
+    if (!q) return allEntries;
+
+    return allEntries.filter(item => {
+      const haystack = [
+        item.name,
+        item.description,
+        item.note || '',
+        ...(item.tags || [])
+      ]
+        .join(' ')
+        .toLowerCase();
+
+      return haystack.includes(q);
+    });
+  }
+
+  async function loadGlossary() {
+    try {
+      const res = await fetch('glossary.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      allEntries = await res.json();
+
+      renderGlossary(allEntries);
+      updateSearchStatus('', allEntries.length, allEntries.length);
+    } catch (err) {
+      glossaryEl.innerHTML = '<p>Failed to load glossary data.</p>';
+      if (searchStatus) searchStatus.textContent = '';
+      console.error('Failed to load glossary:', err);
+    }
+  }
+
+  // Debounce helper to avoid filtering on every keystroke too aggressively
+  function debounce(fn, delay = 200) {
+    let t;
+    return (...args) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn(...args), delay);
+    };
+  }
+
+  const handleSearch = debounce(() => {
+    const query = searchInput.value || '';
+    const filtered = filterEntries(query);
+    renderGlossary(filtered);
+    updateSearchStatus(query, filtered.length, allEntries.length);
+  }, 150);
+
+  if (searchInput) {
+    searchInput.addEventListener('input', handleSearch);
+  }
+
+  loadGlossary();
+</script>
+</body>
+</html>
